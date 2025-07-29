@@ -1,12 +1,15 @@
 package br.com.alura.lucasfernandes.literalura;
 
+import br.com.alura.lucasfernandes.literalura.API.ConsomeApi;
+
 import java.util.Scanner;
 
 public class Principal {
 
     private final String API_URL = "https://gutendex.com/books/";
     private Scanner leitura = new Scanner(System.in);
-    // private DadosAutor dadosAutor;
+
+    ConsomeApi consomeApi = new ConsomeApi();// private DadosAutor dadosAutor;
 
     public void exibeMenu() {
         var opcao = -1;
@@ -47,6 +50,13 @@ public class Principal {
 
     private void buscarLivroPeloTitulo() {
         System.out.println("Buscando livro na api Gutendex");
+        System.out.println("Testando a api Gutendex...");
+        System.out.println("Digite um titulo de livro: ");
+        var nomeTitulo = leitura.nextLine();
+      var teste =   consomeApi.obterDados(nomeTitulo);
+
+         System.out.println(teste.toString());
+
 
     }
 }
