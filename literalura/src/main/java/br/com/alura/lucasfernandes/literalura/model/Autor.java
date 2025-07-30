@@ -19,10 +19,19 @@ public class Autor {
     @OneToMany(mappedBy = "autor", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Livro> livros;
 
+
+    public Autor(Long id, String nome, Integer anoNascimento, Integer anoFalecimento, List<Livro> livros) {
+        this.id = id;
+        this.nome = nome;
+        this.anoNascimento = anoNascimento;
+        this.anoFalecimento = anoFalecimento;
+        this.livros = livros;
+    }
+
     public Autor(DadosAutor dadosAutor){
-        this.nome = dadosAutor.nome();
-        this.anoNascimento = dadosAutor.anoNascimento();
-        this.anoFalecimento = dadosAutor.anoFalecimento();
+        this.nome = dadosAutor.name();
+        this.anoNascimento = dadosAutor.birthYear();
+        this.anoFalecimento = dadosAutor.deathYear();
     }
     public  Autor(){
 
@@ -75,7 +84,6 @@ public class Autor {
                 ", nome='" + nome + '\'' +
                 ", anoNascimento=" + anoNascimento +
                 ", anoFalecimento=" + anoFalecimento +
-                ", livros=" + livros +
                 '}';
     }
 }

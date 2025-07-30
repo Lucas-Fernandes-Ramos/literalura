@@ -1,33 +1,52 @@
 package br.com.alura.lucasfernandes.literalura.model;
 
-public enum Idioma {
-    es("Espanhol"),
-    en("Ingles"),
-    fr("Frances"),
-    pt("Portugues"),
-    nd("Não disponivel"),
-    ;
+import jakarta.persistence.*;
 
-    private String idiomaCompleto;
+import java.util.List;
 
-    Idioma(String idiomaCompleto) {
-        this.idiomaCompleto = idiomaCompleto;
+@Entity
+@Table(name = "idiomas")
+public class Idioma {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    private String language;
+    @ManyToMany(mappedBy = "languages", fetch = FetchType.EAGER)
+    private List<Livro> books;
+
+    public Idioma() {
     }
 
-    public static Idioma stringToEnum(String idioma) {
-        for (Idioma item : Idioma.values()) {
-            if (item.name().equalsIgnoreCase(idioma)) {
-                return item;
-            }
-        }
-        return nd;
+    public Idioma(String language) {
+        this.language = language;
     }
-    public static void listarIdiomas(){
-        for (Idioma idioma:Idioma.values()){
-            System.out.println(idioma.name()+" - "+idioma.getIdiomaCompleto());
-        }
+
+    public Long getId() {
+        return id;
     }
-    public String getIdiomaCompleto() {
-        return idiomaCompleto;
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
+    }
+
+    public List<Livro> getBooks() {
+        return books;
+    }
+
+    public void setBooks(List<Livro> books) {
+        this.books = books;
+    }
+
+    @Override
+    public String toString() {
+        return this.language;
     }
 }
