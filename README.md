@@ -18,15 +18,27 @@ O sistema apresenta um **menu interativo** com as seguintes opções:
 
 ## 🛠️ Tecnologias Utilizadas
 
-| Tecnologia | Descrição |
-|------------|-----------|
-| [![Java](https://img.shields.io/badge/Java-17+-red?logo=java&logoColor=white)](https://dev.java/learn/) | Linguagem principal do projeto, utilizando recursos modernos como `record`, `switch` aprimorado, etc. |
-| [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-6DB33F?logo=springboot)](https://spring.io/projects/spring-boot) | Framework para criação de aplicações Java modernas com configuração mínima. |
-| [![Spring Data JPA](https://img.shields.io/badge/Spring%20Data%20JPA-%232196F3.svg?logo=spring&logoColor=white)](https://spring.io/projects/spring-data-jpa) | Abstração para acesso a dados usando JPA com o Hibernate. |
-| [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14+-336791?logo=postgresql&logoColor=white)](https://www.postgresql.org/) | Banco de dados relacional usado para persistência dos livros e autores. |
-| [![Jackson](https://img.shields.io/badge/Jackson-JSON-2196f3?logo=json&logoColor=white)](https://github.com/FasterXML/jackson) | Serialização e desserialização automática de JSON, com suporte a `record`. |
-| [![RestTemplate](https://img.shields.io/badge/RestTemplate-Spring-6db33f)](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/client/RestTemplate.html) | Cliente HTTP usado para consumir a API pública do Gutendex. |
-## 📦 Como rodar o projeto localmente
+- **Java 17+**  
+  Linguagem principal do projeto, utilizada com recursos modernos como `record`, `switch` aprimorado e Stream API.
+
+- **Spring Boot 3.x**  
+  Framework que facilita a criação de aplicações Java com configuração mínima e servidor embutido.
+
+- **Spring Data JPA**  
+  Abstração de persistência baseada no padrão JPA, com suporte ao Hibernate, queries automáticas e repositórios.
+
+- **PostgreSQL**  
+  Banco de dados relacional utilizado para armazenar os livros e autores da aplicação.
+
+- **Jackson**  
+  Biblioteca de serialização e desserialização de objetos Java para JSON, essencial para consumir APIs externas.
+
+- **Lombok**  
+  Biblioteca que reduz a verbosidade do código com anotações como `@Data`, `@Builder`, `@NoArgsConstructor`, etc.
+
+- **RestTemplate**  
+  Cliente HTTP fornecido pela Spring Framework, usado para consum
+
 
 ### 1. Pré-requisitos
 
