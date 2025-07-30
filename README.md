@@ -33,9 +33,6 @@ O sistema apresenta um **menu interativo** com as seguintes opções:
 - **Jackson**  
   Biblioteca de serialização e desserialização de objetos Java para JSON, essencial para consumir APIs externas.
 
-- **Lombok**  
-  Biblioteca que reduz a verbosidade do código com anotações como `@Data`, `@Builder`, `@NoArgsConstructor`, etc.
-
 - **RestTemplate**  
   Cliente HTTP fornecido pela Spring Framework, usado para consum
 
